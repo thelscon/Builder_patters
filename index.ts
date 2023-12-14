@@ -198,7 +198,7 @@ interface IComputerConfiguration<T extends configurationTypes> {
 }
 
 // определяем билдеры (разнообразные конфигурации компьютера)
-// базовая конфигурация
+// конфигурация по умолчанию
 class DefaultConfiguration implements IComputerConfiguration<DefaultConfiguration> {
     build () {
         return new Computer (
