@@ -324,7 +324,7 @@ interface IOnlineStore {
     readonly computerSale : () => IComputer | undefined
 }
 class OnlineStore implements IOnlineStore {
-    #configuration ?: configurationTypes
+    #configuration ?: IComputerConfiguration<configurationTypes>
 
     setConfiguration (configuration : IComputerConfiguration<configurationTypes>) {
         this.#configuration = configuration

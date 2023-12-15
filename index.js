@@ -13,7 +13,7 @@
 // Додатково:
 // Реалізуйте можливість визначення деяких параметрів за замовчуванням (наприклад, базова конфігурація комп'ютера).
 // Створіть клас "Клієнт" (Client), який використовуватиме "Директора" та "Будівельників" для створення різних конфігурацій комп'ютерів.
-// ________________________________________________________________________________Решение
+// ____________________Решение____________________
 // определяем компоненты компьютера
 var EMotherboardBrand;
 (function (EMotherboardBrand) {
@@ -168,7 +168,7 @@ class Computer {
     }
 }
 // определяем билдеры (разнообразные конфигурации компьютера)
-// базовая конфигурация
+// конфигурация по умолчанию
 class DefaultConfiguration {
     build() {
         return new Computer(new Motherboard(EMotherboardBrand.ASRock), new CPU(ECPUBrand.Intel), new RAM(ERAMBrand.Corsair, ERAMCapacity["16 GB"]), new GPU(EGPUBrand.Arktek, EGPUManufacturer.nVidia), new StorageDevice(EStorageDeviceBrand.Transcend, EStorageDeviceConnectionInterface.SATA, EStorageDeviceCapacity["1 TB"]), new PowerSupply(), new PCCase());
